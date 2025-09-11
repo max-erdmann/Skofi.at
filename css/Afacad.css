@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Afacad-Regular';
+  src: url('/fonts/Afacad-Regular.woff2') format('woff2'),
+       url('/fonts/Afacad-Regular.woff') format('woff'),
+       url('/fonts/Afacad-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 100.0;
+*
+* available axes:
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: 'Afacad';
+  src: url('../fonts/Afacad-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 100.0;
+*
+* available axes:
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: 'Afacad-Italic';
+  src: url('../fonts/Afacad-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
