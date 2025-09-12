@@ -262,7 +262,7 @@ a[href="#Kontakt"]:hover {
 .landing {
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, #0909098b 77%, transparent 100%);
+  /* background: linear-gradient(to bottom, #0909098b 77%, transparent 100%); */
   position: absolute;
 }  
 
@@ -278,7 +278,7 @@ a[href="#Kontakt"]:hover {
   height: 100vh;
   width: 100vw;
   background: url("/img/johnkcay_skofarmerPopfest_2023_\ 24.jpg");
-  filter: brightness(1.3);
+  filter: brightness(1.2);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -435,6 +435,8 @@ tr:last-child {
 
   a[href="https://linktr.ee/skofisound"] {
     display: initial;
+    align-self: flex-start;
+    justify-self: flex-start;
   }
 
   a[href="https://linktr.ee/skofisound"] {
@@ -442,9 +444,6 @@ tr:last-child {
 }
 
   
-  .topbar:hover {
-    width: 92%;
-  }
 
   .dropdownmenu {
     display: flex;
@@ -463,11 +462,11 @@ tr:last-child {
     height: 100%;
   }
 
-  a[href="#menubutton"]:hover {
+  /* a[href="#menubutton"]:hover {
     color: var(--main-black);
     background: var(--main-white);
 
-  }
+  } */
 
   .dropdowncontent {
     max-height: 0;
@@ -475,6 +474,7 @@ tr:last-child {
     transition: .4s ease;
     opacity: 0;
     width: 100%;
+    transition: .3s ease;
   }
 
   .dropdowncontent a {
@@ -494,7 +494,7 @@ tr:last-child {
 
   .dropdowncontent ul {
     margin: 3em 0 2em 0;
-    width: 100%;
+    width: 100;
   }
 
   .dropdowncontent li {
@@ -511,6 +511,8 @@ tr:last-child {
   .dropdowncontent.active {
     max-height: min(100vh, 600px);
     opacity: 1;
+    width: 200%;
+    transform: translateX(-38%);
   }
 
 
