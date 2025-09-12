@@ -34,6 +34,7 @@ html {
   --lila: #B0ADFF;
   --lila-light: #B2B0FF;
   --main-black: #090909;
+  --button-black: #262626;
   --main-white: #FFFEFB;
 }
 
@@ -201,19 +202,21 @@ nav {
   overflow: hidden;
 }
 
-.topbar a:hover {
-  color: var(--main-white);
-  background: var(--main-black);
+@media (hover: hover) {
+  .topbar a:hover {
+    color: var(--main-white);
+    background: var(--button-black);
+  }
+
+  a[href="https://linktr.ee/skofisound"]:hover {
+    background-color: var(--button-black);
+  }
 }
 
 a[href="https://linktr.ee/skofisound"] {
   background-color: var(--lila);
   color: var(--main-black);
   flex: 1 1 18.6%;
-}
-
-a[href="https://linktr.ee/skofisound"]:hover {
-  background-color: var(--main-black);
 }
 
 a[href="https://linktr.ee/skofisound"]::before {
@@ -225,8 +228,8 @@ a[href="https://linktr.ee/skofisound"]::before {
   right: .1em;
 }
 
-a[href="#Kontakt"] {
-  background-color: var(--main-black);
+.topbar a[href="#Kontakt"] {
+  background-color: var(--button-black);
   color: var(--main-white);
 }
 
@@ -445,7 +448,7 @@ tr:last-child {
 }
 
  a[href="#Kontakt"]:hover {
-  background-color: var(--main-black);
+  background-color: var(--button-black);
  }
   
 
@@ -458,6 +461,7 @@ tr:last-child {
     height: 100%;
     text-align: center;
     transition: .4s ease;
+    padding: 0 .25em;
   }
 
   .dropdownmenu a {
@@ -486,7 +490,7 @@ tr:last-child {
     height: 100%;
     display: block;
     margin: .6em 0;
-    background: var(--main-black);
+    background: var(--button-black);
     color: var(--main-white);
     border-radius: .5em;
     padding: .3em 0;
@@ -503,20 +507,20 @@ tr:last-child {
 
   .dropdowncontent li {
     /* border-bottom: 2px solid var(--main-black); */
-    width: 80%;
+    width: min(500px, 90%);
     margin: 0 auto;
     transition: .4s ease;
   }
 
   .dropdowncontent li:hover {
-    width: 88%;
+    width: 100%;
   }
 
   .dropdowncontent.active {
     max-height: min(100vh, 600px);
     opacity: 1;
     width: 200%;
-    transform: translateX(-38%);
+    transform: translateX(-40%);
   }
 
 
