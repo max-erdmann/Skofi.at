@@ -443,6 +443,9 @@ tr:last-child {
   flex: 2 1 150%;
 }
 
+ a[href="#Kontakt"]:hover {
+  background-color: var(--main-black);
+ }
   
 
   .dropdownmenu {
