@@ -1,18 +1,19 @@
-const hamMenu = document.querySelector('.ham-menu');
+const dropDownMenu = document.querySelector('.dropdownmenu');
 
-const offScreenMenu = document.querySelector('.off-screen-menu');
+const dropDownContent = document.querySelector('.dropdowncontent');
 
-const socials = document.querySelector('.socials');
+const topbar = document.querySelector('.topbar');
 
-hamMenu.addEventListener('click', () => {
-    hamMenu.classList.toggle('active');
-    offScreenMenu.classList.toggle('active')
-    socials.classList.toggle('active');
+dropDownMenu.addEventListener('click', () => {
+    dropDownMenu.classList.toggle('active');
+    dropDownContent.classList.toggle('active')
+    topbar.classList.toggle('active');
 })
 
-document.querySelectorAll('.off-screen-menu a').forEach(link => {
+document.querySelectorAll('.dropdowncontent a').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelector('.off-screen-menu').classList.remove('active');
-    document.querySelector('.ham-menu').classList.remove('active');
-    document.querySelector('.socials').classList.remove('active');});
+    document.querySelectorAll('.dropdowncontent').classList.remove('active');
+    document.querySelectorAll('.dropdownmenu').classList.remove('active');
+    document.querySelectorAll('.topbar').classList.remove('active');
+  });
 });
