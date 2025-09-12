@@ -293,6 +293,7 @@ a[href="#Kontakt"]:hover {
   bottom: 0vh;
   transform: scaleX(2);
   animation: bounce .4s ease-in infinite alternate ;
+  cursor: default;
 }
 
 @keyframes bounce {
