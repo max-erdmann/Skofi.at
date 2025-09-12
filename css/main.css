@@ -147,6 +147,8 @@ ul {
 
 /* FOOTER */
 
+
+
 footer {
   padding: 0 1rem 0 1rem;
   margin-top: 5rem;
@@ -159,6 +161,10 @@ footer p, footer a {
     font-size: var(--mini);
     color: var(--main-white);
 } 
+
+footer a:hover {
+  text-decoration: none;
+}
 
 /* TOPBAR */
 
@@ -207,10 +213,16 @@ nav {
     color: var(--main-white);
     background: var(--button-black);
   }
-
+  
   a[href="https://linktr.ee/skofisound"]:hover {
     background-color: var(--button-black);
-  }
+}
+
+}
+
+#topbarkontaktlink:hover {
+background-color: var(--lila);
+color: var(--main-black);
 }
 
 a[href="https://linktr.ee/skofisound"] {
@@ -235,15 +247,6 @@ a[href="https://linktr.ee/skofisound"]::before {
 
 a[href="#tourdates"], a[href="#Kontakt"], a[href="#Musik"], a[href="shop.html"], a[href="#Info"] {
   flex: 1 1 16.6%;
-}
-
-a[href="#Kontakt"]:hover {
-  background-color: var(--lila);
-  color: var(--main-black);
-}
-
-.dropdowncontent a[href="#Kontakt"]:hover {
-  text-decoration: none;
 }
 
 .dropdownmenu {
@@ -332,6 +335,7 @@ a[href="#Kontakt"]:hover {
   justify-content: center;
   z-index: 10;
   margin: 0 1.5rem;
+  transition: .3s ease;
 }
 
 .socials img { 
@@ -447,9 +451,9 @@ tr:last-child {
   flex: 2 1 150%;
 }
 
- a[href="#Kontakt"]:hover {
+ /* a[href="#Kontakt"]:hover {
   background-color: var(--button-black);
- }
+ } */
   
 
   .dropdownmenu {
