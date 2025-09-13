@@ -17,3 +17,17 @@ document.querySelectorAll('.dropdowncontent a').forEach(link => {
     document.querySelectorAll('.topbar').classList.remove('active');
   });
 });
+
+async function loadFragment(id, file) {
+  const res = await fetch(file);
+  if (res.ok) {
+    const text = await res.text();
+    document.getElementById(id).innerHTML = text;
+  } else {
+    console.error(`Fehler beim Laden von ${file}`);
+  }
+}
+
+// Header und Footer laden
+loadFragment("site-header", "header.html");
+loadFragment("site-footer", "footer.html");
