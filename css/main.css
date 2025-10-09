@@ -487,11 +487,11 @@ tr {
 /* KONTAKT */
 
 .kontakt {
-  height: 95vh;
+  height: 94vh;
   width: 100%;
   background-color: var(--lila);
   color: var(--main-black);
-  padding-bottom: 20vh;
+  padding: 10vh 0 10vh 0;
 }
 
 .kontakt a {
@@ -517,6 +517,17 @@ tr {
 /* MOBILE */
 
 @media only screen and (max-device-width: 600px) and (hover: none) {
+
+  td {
+    font-size: var(--mini);
+    font-weight: 500;
+  }
+
+  tr {
+  border-bottom: 1px solid var(--main-black);
+  height: 3em;
+}
+
 
   .streamingdienste {
     flex-direction: column;
