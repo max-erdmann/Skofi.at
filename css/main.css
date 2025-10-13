@@ -71,6 +71,11 @@ h2 {
   margin-top: 1.5em;
 }
 
+h2::after {
+  content:"_";
+  display: inline;
+}
+
 
 h3 {
   font-family: var(--display-font);
@@ -78,6 +83,7 @@ h3 {
   font-weight: 500;
   font-style: normal;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -137,20 +143,22 @@ ul {
 
 .button {
   display: block;
-  background-color: var(--main-white);
-  color: var(--main-black);
-  padding: .7em 1em;
+  padding: .7em 2em;
   margin: 5vh 0;
   border-radius: .5rem;
   text-decoration: none;
   font-family: var(--display-font);
-  border: 3px solid var(--main-white);
   text-align: center;
+  transition: .3s ease;
+  background-color: var(--main-white);
+  color: var(--main-black);
+  border: 3px solid var(--main-white);
+  font-family: RobotoMonoItalic;
 }
 @media (hover: hover) {
-
+  
   .button:hover {
-    background-color: var(--main-black);
+    background-color: var(--button-black);
     color: var(--main-white);
     border: 3px solid var(--lila);
   }
@@ -220,6 +228,7 @@ nav {
   border-radius: .3em;
   margin: 0 0.1em;
   overflow: hidden;
+  font-family: RobotoMonoItalic;
 }
 
 
@@ -273,20 +282,6 @@ color: var(--main-black);
 
 .homebutton:hover .logobuttonwhite {
   opacity: 1;
-}
-
-/* .homebutton::before {
-  content: "🎉";
-  transform: scale(0.7);
-  display: inline-block;
-  position: relative;
-  top: .1em;
-  right: .1em;
-} */
-
-.topbar a[href="#Kontakt"] {
-  /* background-color: var(--button-black);
-  color: var(--main-white); */
 }
 
 
@@ -363,20 +358,6 @@ color: var(--main-black);
   width: 100vw;
 }  
 
-.newrelease {
-  max-width: 80%;
-}
-
-.newrelease h2 {
-  filter: drop-shadow(0 0 20px var(--main-black));
-  padding: 0 0 0 .3em;
-  border: 5px solid var(--main-white);
-  text-align: center;
-}
-
-.newrelease a {
-  text-decoration: none;
-}
 
   
 /* SOCIALS */
@@ -398,6 +379,11 @@ color: var(--main-black);
   margin: 0.3rem 0 0 0;
 }
 
+.tidal {
+  position: relative;
+  bottom: 7px;
+}
+
 .icon:hover {
   transform: scale(1.2);
 }
@@ -412,29 +398,56 @@ color: var(--main-black);
 
   
 /* MAIN CONTENT */
-
-.video {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1vh;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  padding-bottom: 20vh;
-}
-
-.videoplayer {
-  aspect-ratio: 16 / 9;
-  width: min(1300px, 90%);
-  margin: 1vh;
-}
-
 .musik {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#newsingle {
+  grid-template-areas:
+  "txt img"
+  ;
+}
+
+#newsingle img {
+  grid-area: img;
+}
+
+.newrelease {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: min(85vw, 1050px);
+  align-content: center;
+  padding-bottom: 10%;
+  gap: 5%;
+}
+
+
+.newrelease .icon {
+  margin: 1.5rem 2rem 1rem 0;
+  max-width: 1.8rem;
+}
+
+.newrelease h3 {
+  text-align: left;
+}
+
+.newrelease h4, .newrelease p{
+  text-align: left;
+  margin: 0;
+  font-weight: 100;
+  font-size: var(--big);
+}
+
+.newrelease h4 {
+  font-size: var(--small);
+}
+
+.newrelease img {
+  width: 100%;
 }
 
 .streamingdienste {
@@ -443,7 +456,7 @@ color: var(--main-black);
   gap: 3vw;
 }
 
-.musik img {
+.skofiasko img {
   width: 100%;
   justify-self: end;
 }
@@ -455,9 +468,9 @@ color: var(--main-black);
   grid-template-areas: 
   "left right";
   gap: 5vw;
-  max-width: min(86vw, 1300px);
+  max-width: min(85vw, 1250px);
   margin: 0 auto;
-  padding-top: 20vh;
+  padding-bottom: 20vh;
 }
 
 .left {
@@ -467,8 +480,48 @@ color: var(--main-black);
 
 .right {
   grid-area: right;
-  align-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.right h2 {
+  margin: -3vh 0 0 0;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vh;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding-bottom: 20vh;
+}
+
+.videobox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5vh;
+  width: min(85vw, 1250px);
+}
+
+.videoplayer {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .videobox {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2vh;
+  }
+}
+
 
 .tourdates {
   display: flex;
@@ -481,6 +534,11 @@ color: var(--main-black);
 
 .tourdates a {
   color: var(--main-black);
+}
+
+.tourdates h4 {
+  width: 100vw;
+  height: 50vh;
 }
 
 table {
@@ -520,6 +578,7 @@ tr {
 }
 
 
+
 /* KONTAKT */
 
 .kontakt {
@@ -554,6 +613,11 @@ tr {
 
 @media only screen and (max-device-width: 600px) and (hover: none) {
 
+  .newrelease .icon {
+    max-width: 1.5rem;
+    margin: 1rem 1rem 2rem 0;
+  }
+
   td {
     font-size: var(--mini);
     font-weight: 500;
@@ -574,7 +638,11 @@ tr {
   }
 
   .button {
-    margin: 0;
+    margin: 1vh 0;
+  }
+
+  .video .button {
+    margin: 5vh 0;
   }
 
   .topbar a {
@@ -599,6 +667,22 @@ tr {
 }
 
 @media only screen and (max-width: 900px) {
+
+ #newsingle {
+  grid-template-areas:
+  initial
+  ;
+}
+
+#newsingle img {
+  grid-area: initial;
+}
+
+
+  .newrelease {
+    grid-template-columns: 1fr;
+  }
+
 
   h3 {
     text-align: center;
