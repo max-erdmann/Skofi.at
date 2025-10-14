@@ -153,7 +153,7 @@ ul {
   background-color: var(--main-white);
   color: var(--main-black);
   border: 3px solid var(--main-white);
-  font-family: RobotoMonoItalic;
+  font-family: var(--display-font);
 }
 @media (hover: hover) {
   
@@ -228,7 +228,6 @@ nav {
   border-radius: .3em;
   margin: 0 0.1em;
   overflow: hidden;
-  font-family: RobotoMonoItalic;
 }
 
 
