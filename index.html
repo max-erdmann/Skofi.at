@@ -15,48 +15,52 @@
     <!-- Hero Section -->
     <header id="Home">
         <div class="landing flex">
-            <img class="logo" src="logo/logo_white.svg" alt="logo">
-            <div class="arrow">
+                <a href="#maincontent"><img class="logo" src="logo/logo_white.svg" alt="logo"></a>
+            <!-- <div class="arrow">
                 <p>
                     ˯
-                </p>
+                </p> -->
             </div>
         </div>
         <div class="img-container"></div> 
-        <div class="empty-space flex">
-        </div>
+        <!-- <div class="empty-space flex">
+        </div> -->
     </header>
     
-    <nav>
+    <nav class="flex">
         <div class="topbar">
-            <a class="homebutton" href="#">
-                <img class="logobutton" src="logo/logo_black.svg">
+            <a href="#">
                 <img class="logobuttonwhite" src="logo/logo_white.svg">
-                </a>
+            </a>
             <a href="#tourdates">Live</a>
             <a href="#bio">Info</a>
             <a href="shop.html">Shop</a>
-            <a id="topbarkontaktlink"href="#Kontakt">Kontakt</a>
-            <div class="dropdownmenu">
-                <a href="#menu">MENU</a>
-                <div class="dropdowncontent">
-                    <ul>
-                        <li><a class="homebutton" href="#">Home</a></li>
-                        <li><a href="#tourdates">Live</a></li>
-                        <li><a href="#bio">Info</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="#Kontakt">Kontakt</a></li>
-                    </ul>
-                </div>
+            <a href="#Kontakt">Kontakt</a>
+        </div>
+        <div class="mobiletopbar flexrow">
+            <a class="logobuttonhammenu" href="#">
+                <img class="logobuttonwhite logobuttonhammenu" src="logo/logo_white.svg">
+            </a>
+            <div class="hammenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>  
+    
+    <ul class="offscreenmenu">
+        <li><a class="smalllink" href="#tourdates">Live</a></li>
+        <li><a class="smalllink" href="#bio">Info</a></li>
+        <li><a class="smalllink" href="shop.html">Shop</a></li>
+        <li><a class="smalllink" href="#Kontakt">Kontakt</a></li>
+    </ul>
     
     <!-- Main Content -->
     <main id="maincontent" class="flex">
         
         <div class="musik">
-            <h2>Musik</h2>
+            <h2 class="heading-musik">Musik</h2>
             <div class="newrelease" id="newsingle">
                 <img src="img/tequilakickcover.png" alt="tequila kick single cover">
                 <div class="newreleaseleft">

@@ -1,19 +1,22 @@
-const dropDownMenu = document.querySelector('.dropdownmenu');
+const hamMenu = document.querySelector('.hammenu');
 
-const dropDownContent = document.querySelector('.dropdowncontent');
+const offScreenMenu = document.querySelector('.offscreenmenu');
 
-const topbar = document.querySelector('.topbar');
+const homeButton = document.querySelector('.logobuttonhammenu');
 
-dropDownMenu.addEventListener('click', () => {
-    dropDownMenu.classList.toggle('active');
-    dropDownContent.classList.toggle('active')
-    topbar.classList.toggle('active');
+hamMenu.addEventListener('click', () => {
+  hamMenu.classList.toggle('active');
+  offScreenMenu.classList.toggle('active');
 })
 
-document.querySelectorAll('.dropdowncontent a').forEach(link => {
+homeButton.addEventListener('click', () => {
+  hamMenu.classList.remove('active');
+  offScreenMenu.classList.remove('active');
+})
+
+document.querySelectorAll('.offscreenmenu a').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelectorAll('.dropdowncontent').classList.remove('active');
-    document.querySelectorAll('.dropdownmenu').classList.remove('active');
-    document.querySelectorAll('.topbar').classList.remove('active');
-  });
-});
+    offScreenMenu.classList.remove('active');
+    hamMenu.classList.remove('active');
+  })
+})
