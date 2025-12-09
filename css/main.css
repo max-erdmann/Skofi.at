@@ -598,6 +598,16 @@ tr {
   width: 100%;
 }
 
+/* IMPRESSUM */
+
+.impressumtext {
+  height: 94vh;
+}
+
+.impressumfooter {
+  position: relative;
+}
+
 
 /* MOBILE */
 
