@@ -20,6 +20,7 @@ html {
   font-size: var(--standard-font-size);
 
   --standard-font-size: 20px;
+  --figcaption: 0.7rem;
   --mini: 0.8rem;
   --small: 1.1rem;
   --medium: 1.6rem;
@@ -384,6 +385,20 @@ a[href="#maincontent"] {
   
 /* MAIN CONTENT */
 
+figure {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+figcaption {
+  order: -1;
+  bottom: 0.5rem;
+  left: 0.3rem;
+  position: absolute;
+  font-size: var(--figcaption);
+}
+
 .heading-musik {
   margin-top: 1em;
 }
@@ -650,6 +665,7 @@ tr {
   }
 
   html {
+  --figcaption: 0.5rem;
   --big: 2.5rem;
   --medium: 1.3rem;
   --small: 0.9rem;
@@ -662,6 +678,8 @@ tr {
 }
 
 @media only screen and (max-width: 600px) {
+
+ 
 
   .arrow, .arrow p {
     display: block;
