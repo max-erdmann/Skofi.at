@@ -392,7 +392,6 @@ figure {
 }
 
 figcaption {
-  order: -1;
   bottom: 0.5rem;
   left: 0.3rem;
   position: absolute;
@@ -480,7 +479,7 @@ figcaption {
 
 .left {
   grid-area: left;
-  margin: 0 0 5vh 0;
+  margin: 0 0 0vh 0;
 }
 
 .right {
