@@ -227,6 +227,7 @@ nav {
   transition: .2s ease;
   position: absolute;
   bottom: 70px;
+  z-index: 999;
 }
 
 .topbar a {
@@ -244,6 +245,7 @@ nav {
   align-items: center;
   justify-content: center;
   box-shadow: inset 0 3px 0 var(--main-black);
+  z-index: 999;
 }
 
 
@@ -398,7 +400,7 @@ figure {
 figure img {
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: 0 !important;
 }
 
 figcaption {
