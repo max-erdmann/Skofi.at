@@ -421,30 +421,25 @@ figcaption {
   align-items: center;
 }
 
-#newsingle {
-  grid-template-areas:
-  "txt img"
-  ;
-}
-
-#newsingle img {
-  grid-area: img;
-}
-
 .newrelease {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  width: min(85vw, 1050px);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: min(85vw, 1140px);
   align-content: center;
   padding-bottom: 10%;
   gap: 5%;
 }
 
+.coverlink:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
+}
 
-.newrelease .icon {
-  margin: 1.5rem 2rem 1rem 0;
-  max-width: 1.8rem;
+.newrelease > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .newrelease h3 {
@@ -455,21 +450,22 @@ figcaption {
   text-align: left;
   margin: 0;
   font-weight: 100;
-  font-size: var(--big);
 }
 
 .newrelease h4 {
-  font-size: var(--small);
+  font-size: var(--mini);
 }
 
 .newrelease img {
   max-width: 100%;
 }
 
-.streamingdienste {
-  display: flex;
-  flex-direction: row;
-  gap: 3vw;
+.streamingicons a {
+ max-width: 1.8rem;
+ margin: 0 1rem 0 0;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .skofiasko img {
@@ -639,6 +635,11 @@ tr {
 
 @media only screen and (max-device-width: 600px) and (hover: none) {
 
+  .coverlink:hover{
+  transform: none;
+  transition: 0.4s;
+}
+
   .newrelease .icon {
     max-width: 1.5rem;
     margin: 1rem 1rem 2rem 0;
@@ -706,7 +707,7 @@ tr {
     width: 100vw;
     z-index: 100;
     background-color: var(--main-black);
-    height: 60px;
+    height: 70px;
   }
 
   .mobiletopbar {
@@ -786,18 +787,10 @@ tr {
 
 
 
-  #newsingle {
-    grid-template-areas:
-    initial
-    ;
-  }
 
-  #newsingle img {
-    grid-area: initial;
-  }
 
   .newrelease {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
 
