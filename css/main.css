@@ -429,6 +429,10 @@ figcaption {
   gap: 5%;
 }
 
+.newrelease a{
+  text-decoration: none;
+}
+
 .coverlink:hover{
   transform: scale(1.1);
   transition: 0.4s;
