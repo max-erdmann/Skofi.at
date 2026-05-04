@@ -289,6 +289,7 @@ nav {
   filter: drop-shadow(0px 0px 50px var(--main-black));
   width: min(100%, 1000px);
   transition: filter .2 ease;
+  padding: 10%;
 }  
 
 @media (hover: hover) {
