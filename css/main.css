@@ -520,10 +520,9 @@ figcaption {
 /* VIDEO CAROUSEL */
 /* Container für das gesamte Karussell */
 .carousel-wrapper {
-  width: min(85vw, 1140px);
+  width: min(85vw, 900px);
   margin: 0 auto;
   position: relative;
-
 }
 
 /* Das eigentliche Karussell */
@@ -547,7 +546,6 @@ figcaption {
 .slide {
   flex: 0 0 100%; /* Jedes Slide ist genau so breit wie der Container */
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -568,7 +566,7 @@ figcaption {
 .carousel-nav {
   display: flex;
   justify-content: space-between;
-  gap: 10vw;
+  gap: 5vw;
   margin: 15px 0 10vh;
   text-decoration: none;
   flex-wrap: nowrap;
