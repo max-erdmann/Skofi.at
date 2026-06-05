@@ -529,7 +529,7 @@ figcaption {
 /* Das eigentliche Karussell */
 .carousel {
   display: flex;
-  overflow-x: auto;
+  overflow-x: auto !important;
   scrollbar-width: none; /* Versteckt die Scrollbar in Firefox */
   scroll-behavior: smooth; /* Sorgt für flüssiges Scrollen beim Klick auf Nav-Links */
   
