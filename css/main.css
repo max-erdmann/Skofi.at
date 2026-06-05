@@ -483,9 +483,9 @@ figcaption {
   grid-template-areas: 
   "left right";
   gap: 5vw;
-  max-width: min(85vw, 1250px);
+  max-width: min(85vw, 1140px);
   margin: 0 auto;
-  padding-bottom: 20vh;
+  padding: 10vh 0;
 }
 
 .left {
@@ -513,7 +513,80 @@ figcaption {
   align-items: center;
   height: auto;
   width: 100%;
-  padding-bottom: 20vh;
+  
+}
+
+
+/* VIDEO CAROUSEL */
+/* Container für das gesamte Karussell */
+.carousel-wrapper {
+  width: min(85vw, 1140px);
+  margin: 0 auto;
+  position: relative;
+
+}
+
+/* Das eigentliche Karussell */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Versteckt die Scrollbar in Firefox */
+  scroll-behavior: smooth; /* Sorgt für flüssiges Scrollen beim Klick auf Nav-Links */
+  
+  /* Magie: Aktiviert das Einrasten auf der X-Achse */
+  scroll-snap-type: x mandatory; 
+}
+
+/* Versteckt die Scrollbar in Chrome, Safari und Edge */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Die einzelnen Slides */
+.slide {
+  flex: 0 0 100%; /* Jedes Slide ist genau so breit wie der Container */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  scroll-margin-top: 29vh;
+  
+  /* Magie: Bestimmt, wo das Slide einrastet (am Start/Links) */
+  scroll-snap-align: start; 
+}
+
+/* Styling für die Navigationspunkte (Dots) */
+.carousel-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10vw;
+  margin: 15px 0 10vh;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  max-width: 95vw;
+}
+
+.carousel-nav a {
+  font-size: var(--small);
+  transition: color 0.3s;
+  text-decoration: none;
+  display: flex;
+}
+
+.carousel-nav a:first-child::after {
+  content: "→ "
+}
+
+.carousel-nav a:last-child::before {
+  content: " ←"
+}
+
+.carousel-nav a:hover {
+  transform: scale(1.2);
+  color: var(--lila);
 }
 
 .videobox {
@@ -544,33 +617,50 @@ figcaption {
   align-items: center;
   background-color: var(--lila);
   color: var(--main-black);
-  padding-bottom: 13vh;
+  padding: 13vh 0;
 }
 
 .tourdates a {
   color: var(--main-black);
 }
 
-.tourdates h4 {
-  width: 100vw;
-  height: 50vh;
+.tourdates h2 {
+  margin: 0 auto;
+  width: 90vw;
+  text-align: center;
+  
 }
 
 table {
   width: min(80%, 1000px);
-  margin: 3%;
+  margin: 10%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
 td {
-  padding-top: 3em;
+  padding-top: 0em;
 }
 
 tr {
   border-bottom: 1px solid var(--main-black);
   height: 6em;
   text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+
+  table {
+    
+  }
+
+
 }
 
 /* SHOP */
