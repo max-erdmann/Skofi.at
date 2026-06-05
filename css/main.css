@@ -557,6 +557,11 @@ figcaption {
   
   /* Magie: Bestimmt, wo das Slide einrastet (am Start/Links) */
   scroll-snap-align: start; 
+  /* Erlaubt horizontales Wischen und vertikales Scrollen der Seite, */
+  /* verhindert aber Konflikte mit Browser-Gesten */
+  touch-action: pan-x pan-y;
+  /* Zwingt iOS zu flüssigem "Momentum"-Scrollen */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Styling für die Navigationspunkte (Dots) */
