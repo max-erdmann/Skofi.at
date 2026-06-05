@@ -535,6 +535,7 @@ figcaption {
   
   /* Magie: Aktiviert das Einrasten auf der X-Achse */
   scroll-snap-type: x mandatory; 
+  /* Zwingt iOS zu flüssigem "Momentum"-Scrollen */
 }
 
 /* Versteckt die Scrollbar in Chrome, Safari und Edge */
@@ -646,21 +647,6 @@ tr {
   border-bottom: 1px solid var(--main-black);
   height: 6em;
   text-align: center;
-}
-
-@media only screen and (max-width: 900px) {
-  tr {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 1em;
-  }
-
-  table {
-    
-  }
-
-
 }
 
 /* SHOP */
@@ -784,6 +770,9 @@ tr {
 
 @media only screen and (max-width: 600px) {
 
+  .video {
+    margin-top: 10vh;
+  }
  
 
   .arrow, .arrow p {
