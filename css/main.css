@@ -431,6 +431,11 @@ figcaption {
   padding: 15px;
 }
 
+.release-highlight a:hover {
+  transform: scale(1.02) !important;
+  transition: 0.3s;
+}
+
 .newrelease {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -447,7 +452,7 @@ figcaption {
 
 .coverlink:hover{
   transform: scale(1.05);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .newrelease > div{
