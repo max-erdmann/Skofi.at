@@ -420,6 +420,17 @@ figcaption {
   align-items: center;
 }
 
+.release-highlight {
+  grid-column: span 4;
+  flex-direction: row !important;
+  gap: 5%;
+}
+
+.release-highlight h3 {
+  border: 2px solid white;
+  padding: 15px;
+}
+
 .newrelease {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -435,7 +446,7 @@ figcaption {
 }
 
 .coverlink:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.4s;
 }
 
@@ -871,7 +882,9 @@ tr {
   }
 
 
-
+  .release-highlight {
+    flex-direction: column;
+  }
 
 
   .newrelease {
