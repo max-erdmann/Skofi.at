@@ -888,7 +888,7 @@ tr {
 
 
   .release-highlight {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     grid-column: span 2;
     
   }
@@ -896,6 +896,7 @@ tr {
 
   .newrelease {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 60%;
   }
 
 
