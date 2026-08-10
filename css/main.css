@@ -889,6 +889,8 @@ tr {
 
   .release-highlight {
     flex-direction: column;
+    grid-column: span 2;
+    
   }
 
 
