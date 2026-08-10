@@ -888,7 +888,7 @@ tr {
 
 
   .release-highlight {
-    flex-direction: column;
+    flex-direction: column !important;
     grid-column: span 2;
     
   }
